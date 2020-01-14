@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  analysis_env:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    hostname: 'analysis_env'
+    volumes:
+      - .:/workdir
